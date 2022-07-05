@@ -30,11 +30,10 @@ public with sharing class LeadTriggerHandler_Queueable {
     public void checkLeadAfterInsert(List<Lead> leads){
         List<Lead> leadsToDelete = new List<Lead>();
         Set<String> setCompany = new Set<String>();
-        Set<Id> setIds = new Set<Id>();
+        Set<Id> setIds = (new Map<Id,Lead>(leads)).keySet();
         for(Lead lead : leads)
         {
             setCompany.add(lead.Company);
-            setIds.add(lead.Id);
         }
         
         if(setCompany.size() > 0 )
