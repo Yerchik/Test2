@@ -1,4 +1,4 @@
-public with sharing class LeadTriggerHandler_Queueable {
+public with sharing class LeadTriggerHandler_Queueable implements Queueable {
     private List<Lead> duplicatedLeads;
     
     /**
