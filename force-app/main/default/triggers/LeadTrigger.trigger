@@ -2,7 +2,7 @@
  * @description trigger on Lead object
  * @param  insert - some leads after insert
  */
-trigger LeadTrigger on SOBJECT (After insert) {
+trigger LeadTrigger on Lead (After insert) {
     /**
      * Invokes method to check duplicated leads after insert
      */ 
